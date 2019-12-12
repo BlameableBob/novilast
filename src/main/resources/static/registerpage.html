@@ -1,0 +1,110 @@
+<!doctype html>
+<html xmlns:th="http://thymeleaf.org" lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+
+
+  <title>Harteraad Beweegmaatjes</title>
+</head>
+
+<body>
+
+  <nav class="shadow-sm navbar">
+    <div class="container">
+      <div class="d-flex">
+        <img src="Harteraad_hart.png" alt="" height="100%" width="100%">
+        <h2 class="">Harteraad <p class="txt-m text-right d-flex align-items-start justify-content-end">Beweegmaatjes
+          </p>
+        </h2>
+      </div>
+      <form class="form-inline d-flex align-items-start">
+        <input class="form-control mr-sm-2" type="username" placeholder="E-mail">
+        <input class="form-control mr-sm-2" type="password" placeholder="Wachtwoord">
+        <div class="d-flex flex-column align-content-end">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+          <a class="txt-s" href="#">wachtwoord vergeten?</a>
+      </form>
+    </div>
+    </form>
+    </div>
+  </nav>
+
+
+<form class="center" method="post" action="http://localhost:8080/contacts">
+  <div>
+    <label for="name"> Naam </label><br>
+    <input type="text" name="name" id="name" required>
+  </div>
+  <div>
+    <label for="birthDate"> Geboren op </label><br>
+    <input type="date" name="birthDate" id="birthDate" required>
+  </div>
+  <div>
+    <label for="sex">Geslacht</label><br>
+    <select name="sex" id="sex">
+    <option value="man">man</option>
+    <option value="vrouw">vrouw</option>
+    <option value="anders">anders</option>
+  </select>
+  </div>
+  <div>
+    <label for="city"> Woonplaats </label><br>
+    <input name="city" id="city" required>  
+  </div>
+  <div>
+    <label for="address"> Adres </label><br>
+    <input name="address" id="address" required>
+  </div>
+  <div>
+    <label for="phone"> Telefoonnummer </label><br>
+    <input type="tel" name="phone" id="phone" required>
+  </div>
+  <div>
+    <label for="email"> Email </label><br>
+    <input type="email" name="email" id="email" required>
+  </div>
+  <div>
+    <button type="submit" >Aanmelden</button>
+  </div>
+</form>
+
+
+
+  <footer class="fixed-bottom">
+    <div class="footertext">
+      <b>Contact</b><br>
+      Tel: 088 1111 600<br>
+      info@harteraad.nl<br>
+
+      <b>Bezoekadres</b><br>
+      Prinses Catharina-Amaliastraat 10<br>
+      2496 XD Den Haag<br>
+
+
+    </div>
+  </footer>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+</body>
+
+
+</html>

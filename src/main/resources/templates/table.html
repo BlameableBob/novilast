@@ -1,0 +1,108 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" lang="en">
+
+
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+
+
+
+  <title>Harteraad Beweegmaatjes</title>
+</head>
+
+<body>
+
+  <nav class="shadow-sm navbar">
+    <div class="container">
+      <div class="d-flex">
+        <img src="Harteraad_hart.png" alt="" height="100%" width="100%">
+        <h2 class="">Harteraad <p class="txt-m text-right d-flex align-items-start justify-content-end">Beweegmaatjes
+          </p>
+        </h2>
+      </div>
+      <form class="form-inline d-flex align-items-start">
+        <input class="form-control mr-sm-2" type="username" placeholder="E-mail">
+        <input class="form-control mr-sm-2" type="password" placeholder="Wachtwoord">
+        <div class="d-flex flex-column align-content-end">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+          <a class="txt-s" href="#">wachtwoord vergeten?</a>
+      </form>
+    </div>
+    </form>
+    </div>
+  </nav>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Naam</th>
+      <th scope="col">Geboortedatum</th>
+      <th scope="col">Geslacht</th>
+      <th scope="col">Woonplaats</th>
+      <th scope="col">Adres</th>
+      <th scope="col">Telefoonnummer</th>
+      <th scope="col">e-mail</th>
+      <th scope="col">begeleid</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr th:each="contact : ${contacts}">
+      <th th:text="${contact.id}"></th>
+      <td th:text="${contact.name}"></td>
+      <td th:text="${contact.birthDate}"></td>
+      <td th:text="${contact.sex}"></td>
+      <td th:text="${contact.city}"></td>
+      <td th:text="${contact.address}"></td>
+      <td th:text="${contact.phone}"></td>
+      <td th:text="${contact.email}"></td>
+      <td th:text="${contact.patient}"></td>
+
+
+    </tr>
+
+  </tbody>
+</table>
+
+  <footer class="fixed-bottom">
+    <div class="footertext">
+      <b>Contact</b><br>
+      Tel: 088 1111 600<br>
+      info@harteraad.nl<br>
+
+      <b>Bezoekadres</b><br>
+      Prinses Catharina-Amaliastraat 10<br>
+      2496 XD Den Haag<br>
+
+
+    </div>
+  </footer>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+</body>
+
+
+</html>

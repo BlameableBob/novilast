@@ -1,0 +1,69 @@
+.container {
+    max-width: 1366px;
+    margin: 0 auto;
+}
+
+.txt-m {
+    font-size: medium;
+}
+
+.txt-s {
+    font-size: small;
+}
+
+footer {
+    width: 100%;
+    background-color: rgb(155, 210, 153);
+  }
+
+
+  .footertext {
+      margin-left: 30px;
+  }
+  .navbar {
+      background-color: white;
+  }
+  
+  .btn  {
+      background-color: rgb(155, 210, 153);
+  
+  }
+  
+  
+  body::after {
+      background: url(sportfoto2.png);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 87%;
+      content: "";
+      opacity: 0.25;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      z-index: -1;
+  }
+
+  /**body{
+      background-image: url("sportfoto2.png");
+      background-position:center;
+      background-repeat: no-repeat;
+  
+  
+  }
+  */
+  
+/**form {
+  margin-left: 100px;
+  margin-top: 50px;
+}
+*/
+
+.center {
+  margin: auto;
+  width: 50%;
+  padding:10%;
+ 
+ 
+}

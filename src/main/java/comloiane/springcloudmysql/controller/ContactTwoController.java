@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 @Controller
 public class ContactTwoController {
     @Autowired
@@ -23,13 +25,13 @@ public class ContactTwoController {
     @GetMapping(path = "/volunteers")
     public String contacts(Model model) {
         //test
-        /*Contact c = new Contact();
+/*        Contact c = new Contact();
         c.setName("Jack Bauer");
         c.setBirthDate("1-1-2010");
         c.setCity("Afghanistan");
         List<Contact> contacts = new ArrayList<>();
-        contacts.add(c);*/
-        //model.addAttribute("contacts", contacts);
+        contacts.add(c);
+        model.addAttribute("contacts", contacts);*/
         model.addAttribute("contacts", findAll());
         return "/table.html";
     }

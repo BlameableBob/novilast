@@ -50,7 +50,7 @@ public class ContactController {
         contact.setPhone(body.getFirst("phone").toString());
         contact.setEmail(body.getFirst("email").toString());
 
-        httpServletResponse.sendRedirect("http://localhost:63342/spring-cloud-mysql/src/main/react/my-app/src/html/confirmationpage.html");
+        httpServletResponse.sendRedirect("http://localhost:8080/confirmationpage.html");
 
         return repository.save(contact);
     }

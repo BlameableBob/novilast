@@ -1,7 +1,6 @@
 <!doctype html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org" lang="en">
-
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -22,7 +21,7 @@
   <nav class="shadow-sm navbar">
     <div class="container">
       <div class="d-flex">
-        <img src="Harteraad_hart.png" alt="" height="100%" width="100%">
+        <img src="pictures/Harteraad_hart.png" alt="" height="100%" width="100%">
         <h2 class="">Harteraad <p class="txt-m text-right d-flex align-items-start justify-content-end">Beweegmaatjes
           </p>
         </h2>
@@ -64,7 +63,7 @@
           dictum
           felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate
           eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante,
-          dapibus in, viverra quis, feugiat b. <a href="/volunteers">HTML link code generator</a></p>
+          dapibus in, viverra quis, feugiat b. Click <a th:href="@{/volunteers}">here</a></p>
 
 
       </div>

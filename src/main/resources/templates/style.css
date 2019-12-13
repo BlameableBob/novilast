@@ -31,7 +31,7 @@ footer {
   
   
   body::after {
-      background: url(sportfoto2.png);
+      background: url(pictures/sportfoto2.png);
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: 100% 87%;

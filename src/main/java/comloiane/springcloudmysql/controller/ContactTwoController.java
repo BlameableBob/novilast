@@ -33,6 +33,6 @@ public class ContactTwoController {
         contacts.add(c);
         model.addAttribute("contacts", contacts);*/
         model.addAttribute("contacts", findAll());
-        return "/table.html";
+        return "/volunteers.html";
     }
 }

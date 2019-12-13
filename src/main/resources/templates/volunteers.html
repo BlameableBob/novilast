@@ -25,7 +25,7 @@
   <nav class="shadow-sm navbar">
     <div class="container">
       <div class="d-flex">
-        <img src="Harteraad_hart.png" alt="" height="100%" width="100%">
+        <img src="pictures/Harteraad_hart.png" alt="" height="100%" width="100%">
         <h2 class="">Harteraad <p class="txt-m text-right d-flex align-items-start justify-content-end">Beweegmaatjes
           </p>
         </h2>
@@ -41,7 +41,10 @@
     </form>
     </div>
   </nav>
-
+  <h3 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h3>
+  <form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out"/>
+  </form>
 <table class="table table-hover">
   <thead>
     <tr>

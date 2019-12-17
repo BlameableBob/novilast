@@ -4,26 +4,19 @@
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
       lang="en">
 
-
-
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Bootstrap CSS -->
-
+  <!-- Bootstrap & CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" th:href="@{/resources/style.css}">
-
-
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
 
   <title>Harteraad Beweegmaatjes</title>
 </head>
-
 <body>
-
 <nav class="shadow-sm navbar">
   <div class="container">
     <div class="d-flex">
@@ -39,15 +32,13 @@
               <span sec:authentication="name"></span>
               <input type="submit" value="Sign Out"/>
         </span>
-
       </form>
   </div>
   </form>
   </div>
 </nav>
-
 </form>
-<table class="table table-hover">
+<table id="table_volunteers" class="display">
   <thead>
   <tr>
     <th scope="col">#</th>
@@ -60,11 +51,9 @@
     <th scope="col">e-mail</th>
     <th scope="col">begeleid</th>
 
-
   </tr>
   </thead>
   <tbody>
-
   <tr th:each="contact : ${contacts}">
     <th th:text="${contact.id}"></th>
     <td th:text="${contact.name}"></td>
@@ -76,28 +65,27 @@
     <td th:text="${contact.email}"></td>
     <td th:text="${contact.patient}"></td>
 
-
   </tr>
-
   </tbody>
 </table>
-
+<script>
+  $(document).ready( function () {
+    $('#table_volunteers').DataTable();
+  } );
+</script>
 <footer class="fixed-bottom">
   <div class="footertext">
     <b>Contact</b><br>
     Tel: 088 1111 600<br>
     info@harteraad.nl<br>
-
     <b>Bezoekadres</b><br>
     Prinses Catharina-Amaliastraat 10<br>
     2496 XD Den Haag<br>
 
-
   </div>
 </footer>
-
 <!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS, then DataTables -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
 </script>
@@ -107,7 +95,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
 </script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
 </body>
-
 
 </html>

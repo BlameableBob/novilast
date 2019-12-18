@@ -61,7 +61,7 @@ public class VolunteerController {
     }
 
     //poging tot deleten van een vrijwilliger
-    @RequestMapping(value="/volunteers/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value="/volunteers/{id}", method = RequestMethod.POST)
     public String delete(@PathVariable Long id) {
         repository.deleteById(id);
         return "redirect:/volunteers";

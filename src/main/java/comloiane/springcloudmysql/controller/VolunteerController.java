@@ -39,13 +39,19 @@ public class VolunteerController {
     }
 
     @RequestMapping("/volunteer/new")
-    public String newVoluneer(Model model){
+    public String newVolunteer(Model model){
         model.addAttribute("contact", new Contact());
         return "/registerpage.html";
     }
 
+  /*  @RequestMapping("/volunteerUpdate")
+    public String updateVolunteer(Model model){
+
+        return "/volunteers";
+    }*/
+
     @RequestMapping(value = "/volunteer", method = RequestMethod.POST)
-    public String saveVoluneer(Contact contact){
+    public String saveVolunteer(Contact contact){
         repository.save(contact);
         //return "redirect:/product/show/" + product.getId();
         return "redirect:/confirmationpage";

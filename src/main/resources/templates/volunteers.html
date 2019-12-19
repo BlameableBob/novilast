@@ -31,7 +31,7 @@
       </p>
       </h2>
     </div>
-    <form class="form-inline d-flex align-items-start">
+    <div class="form-inline d-flex align-items-start">
       <h3 th:inline="text">Hallo [[${#httpServletRequest.remoteUser}]]!</h3>
       <form th:action="@{/logout}" method="post">
         <span sec:authorize="isAuthenticated()">
@@ -39,11 +39,11 @@
               <input type="submit" value="Sign Out"/>
         </span>
       </form>
+      </div>
   </div>
-  </form>
-  </div>
+
 </nav>
-</form>
+
 <table id="table_volunteers" class="display">
   <thead>
   <tr>

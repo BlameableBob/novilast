@@ -53,7 +53,7 @@ public class VolunteerController {
         return "/addVolunteer.html";
     }
 
-    @GetMapping(path = {"/volunteers/{id}"})
+    @GetMapping(path = {"/deleteVolunteer/{id}"})
     public ResponseEntity<Contact> findById(@PathVariable long id){
         return repository.findById(id)
                 .map(record -> ResponseEntity.ok().body(record))
@@ -61,7 +61,7 @@ public class VolunteerController {
     }
 
     //poging tot deleten van een vrijwilliger
-    @RequestMapping(value="/volunteers/{id}", method = RequestMethod.POST)
+    @RequestMapping(value="/deleteVolunteer/{id}", method = RequestMethod.POST)
     public String delete(@PathVariable Long id) {
         repository.deleteById(id);
         return "redirect:/volunteers";

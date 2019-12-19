@@ -27,14 +27,6 @@ public class VolunteerController {
 
     @RequestMapping(value = "/volunteers", method = RequestMethod.GET)
     public String contacts(Model model) {
-        //test
-/*        Contact c = new Contact();
-        c.setName("Jack Bauer");
-        c.setBirthDate("1-1-2010");
-        c.setCity("Afghanistan");
-        List<Contact> contacts = new ArrayList<>();
-        contacts.add(c);
-        model.addAttribute("contacts", contacts);*/
         model.addAttribute("contacts", findAll());
         return "/volunteers.html";
     }
@@ -53,14 +45,8 @@ public class VolunteerController {
         return "/addVolunteer.html";
     }
 
-    @GetMapping(path = {"/deleteVolunteer/{id}"})
-    public ResponseEntity<Contact> findById(@PathVariable long id){
-        return repository.findById(id)
-                .map(record -> ResponseEntity.ok().body(record))
-                .orElse(ResponseEntity.notFound().build());
-    }
 
-    //poging tot deleten van een vrijwilliger
+    //deleten van een vrijwilliger
     @RequestMapping(value="/deleteVolunteer/{id}", method = RequestMethod.POST)
     public String delete(@PathVariable Long id) {
         repository.deleteById(id);

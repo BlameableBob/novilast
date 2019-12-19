@@ -73,5 +73,7 @@ public class VolunteerController {
         return "/confirmationpage";
     }
 
+    @RequestMapping(value = "/logout", method = RequestMethod.GET)
+    public String logOut(){return "/";  }
 
 }

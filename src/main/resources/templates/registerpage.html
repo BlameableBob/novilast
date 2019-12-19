@@ -26,15 +26,17 @@
       </p>
       </h2>
     </div>
-    <form class="form-inline d-flex align-items-start">
-      <input class="form-control mr-sm-2" type="username" placeholder="E-mail">
-      <input class="form-control mr-sm-2" type="password" placeholder="Wachtwoord">
-      <div class="d-flex flex-column align-content-end">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
-      </div>
+    <div th:if="${param.error}">
+      Invalid username and password.
+    </div>
+    <div th:if="${param.logout}">
+      You have been logged out.
+    </div>
+    <form th:action="@{/Volunteers}" method="post">
+      <div><label> User Name : <input type="text" name="username"/> </label></div>
+      <div><label> Password: <input type="password" name="password"/> </label></div>
+      <div><input type="submit" value="Sign In"/></div>
     </form>
-  </div>
-  </form>
   </div>
 </nav>
 
